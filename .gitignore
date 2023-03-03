@@ -1,0 +1,12 @@
+# ignore bin
+exoJavaBdd/exoJavaBdd/bin/
+exoJavaBdd/ExoN5/bin/
+
+
+# ignore settings
+exoJavaBdd/exoJavaBdd/.settings/
+exoJavaBdd/ExoN5/.settings
+
+
+# ignore metadata
+exoJavaBdd/.metadata
