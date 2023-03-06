@@ -17,6 +17,19 @@ public class Article {
 
 	}
 
+	public Article(String description, String brand, double price, int category) {
+
+		this.description = description;
+		this.brand = brand;
+		this.price = price;
+		this.category = category;
+	}
+
+	public Article(int id) {
+		this.id = id;
+
+	}
+
 	public int getId() {
 		return id;
 	}
