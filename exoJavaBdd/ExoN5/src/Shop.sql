@@ -5,6 +5,23 @@
  CREATE DATABASE Shop; 
  USE Shop;
  
+-- - Constrution de la tables utilisateurs - --
+ 
+ CREATE TABLE T_Users (
+IdUser int(4) PRIMARY KEY AUTO_INCREMENT,
+Login varchar(20) NOT NULL,
+Password varchar(20) NOT NULL
+) ENGINE = InnoDB;
+
+INSERT INTO T_Users ( Login, Password ) VALUE ( 'WilliamShakespeare','W123');
+INSERT INTO T_Users ( Login, Password ) VALUE ( 'SamiraLachhab','S123');
+INSERT INTO T_Users ( Login, Password ) VALUE ( 'MohamedSijelmassi','M123');
+INSERT INTO T_Users ( Login, Password ) VALUE ( 'OctaviaButler','O123');
+INSERT INTO T_Users ( Login, Password ) VALUE ( 'MariamaBa','M123');
+INSERT INTO T_Users ( Login, Password ) VALUE ( 'NatsumeSoseki','N123');
+
+
+ 
 -- - Constrution de la tables des articles en vente - --
  
  

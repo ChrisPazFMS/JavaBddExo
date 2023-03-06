@@ -1,6 +1,5 @@
 package fr.fms.dao;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +7,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import fr.fms.entities.Article;
 
-public abstract class BddConnection implements Dao<Article> {
+public abstract class BddConnection extends CreatConfigFile implements Dao<Article> {
 	String fileString;
 
 	public static Connection getConnection() {
@@ -17,7 +16,7 @@ public abstract class BddConnection implements Dao<Article> {
 		try {
 			prop = readPropertiesFile("src/credentials.properties");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -40,23 +39,6 @@ public abstract class BddConnection implements Dao<Article> {
 		}
 		return null;
 
-	}
-
-	public static Properties readPropertiesFile(String fileName) throws IOException {
-		FileInputStream fis = null;
-		Properties prop = null;
-		try {
-			fis = new FileInputStream(fileName);
-			prop = new Properties();
-			prop.load(fis);
-		} catch (FileNotFoundException fnfe) {
-			fnfe.printStackTrace();
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
-		} finally {
-			fis.close();
-		}
-		return prop;
 	}
 
 }
